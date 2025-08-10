@@ -1,0 +1,19 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+
+x = int(input())   #number of shoes
+
+my_list = list(map(int,input().split()))
+
+cnt = Counter(my_list)
+
+n = int(input())
+
+total_price = 0
+for _ in range(n):
+    sz, p = map(int,input().split())
+    if cnt[sz] > 0:
+        total_price += p
+        cnt[sz]-=1
+        
+print(total_price)
