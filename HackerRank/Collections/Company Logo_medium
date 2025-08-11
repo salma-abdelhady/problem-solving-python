@@ -1,0 +1,15 @@
+from collections import Counter
+
+if __name__ == '__main__':
+    s = input()
+    freq = {}
+    for i in s:
+        if i in freq:
+            freq[i] += 1
+        else:
+            freq[i] = 1
+            
+    sort_freq = sorted(freq.items(), key=lambda x: (-x[1], x[0]))
+    
+    for key, value in sort_freq[:3]:
+        print(f"{key} {value}")
