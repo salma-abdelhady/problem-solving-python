@@ -1,0 +1,25 @@
+ra, ca = map(int,input().split())
+matA = []
+
+for _ in range(ra):
+    row = list(map(int,input().split()))
+    matA.append(row)
+
+rb, cb = map(int,input().split())
+matB = []
+
+for _ in range(rb):
+    row = list(map(int,input().split()))
+    matB.append(row)
+
+res = [[0] * cb for _ in range(ra)]
+
+for i in range(ra):
+    for j in range(cb):
+        for k in range(ca):
+            res[i][j] += matA[i][k] * matB[k][j]
+
+for row in res:
+    print(*row)
+
+ 
