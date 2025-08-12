@@ -1,0 +1,11 @@
+def sum(n):
+    return (n * (n+1))/ 2
+
+a, b, x = map(int,input().split())
+
+if a > b:
+    a,b = b,a
+    
+res = int(sum(b // x) * x - sum((a-1) // x) * x)
+
+print(res)
