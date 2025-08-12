@@ -1,0 +1,15 @@
+str_n, x = input().split()
+
+x = int(x)
+
+res = 0
+
+for d in str_n:
+    res *= 10
+    res += int(d)
+    res %= x
+
+if res == 0:
+    print("YES")
+else:
+    print("NO")    
