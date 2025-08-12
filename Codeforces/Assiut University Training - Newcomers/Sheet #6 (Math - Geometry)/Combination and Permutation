@@ -1,0 +1,11 @@
+def fac(n):
+    if n <= 1:
+        return 1
+    return n * fac(n-1)
+    
+a, b = map(int,input().split())
+
+ncr = fac(a) // (fac(b) * fac(a-b))
+npr = fac(a) // fac(a - b)
+
+print(f"{ncr} {npr}")
