@@ -1,0 +1,28 @@
+t = int(input())
+
+n, x = input().split()
+
+int_x = int(x)
+
+res = 0
+
+if t == 1:
+    for c in range(len(n)-1,-1,-1):
+        if n[c].isdigit():
+            res += pow(int_x, len(n) - c - 1) * int(n[c])
+        else:
+            res += pow(int_x, len(n) - c - 1) * (ord(n[c]) - ord('A') + 10)
+    print(res)
+
+else:
+    int_n = int(n)
+    ans = ""
+    
+    while int_n > 0:
+        rem = int_n % int_x
+        if rem <= 9:
+            ans = str(rem) + ans
+        else:
+            ans = chr(rem - 10 + ord('A') ) + ans
+        int_n //= int_x
+    print(ans)
