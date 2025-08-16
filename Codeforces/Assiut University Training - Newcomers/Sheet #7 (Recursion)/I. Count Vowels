@@ -1,0 +1,16 @@
+vowels = ['a', 'e', 'i', 'o', 'u']
+
+def rec(s, st, n):
+    if st == n:
+        return 0
+    if s[st] in vowels:
+        return 1 + rec(s,st + 1, n)
+    else:
+        return rec(s,st + 1, n)
+    
+    
+s = input().lower()
+
+cnt = rec(s,0,len(s))
+
+print(cnt)
