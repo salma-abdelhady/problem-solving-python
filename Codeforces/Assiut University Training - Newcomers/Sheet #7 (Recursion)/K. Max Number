@@ -1,0 +1,14 @@
+n = int(input())
+
+def find_max(lst, m = None, st=0):
+    if st == n:
+        return m
+    if m is None or m < lst[st]:
+        return find_max(lst,lst[st], st+1)
+    return find_max(lst,m,st+1)
+    
+lst = list(map(int, input().split()))
+
+max_element = find_max(lst)
+
+print(max_element)
