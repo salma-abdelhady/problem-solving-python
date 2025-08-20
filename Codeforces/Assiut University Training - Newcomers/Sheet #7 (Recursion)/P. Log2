@@ -1,0 +1,9 @@
+n = int(input())
+
+def log(x,base = 2):
+    if x < 2:
+        return 0
+    return 1 + log(x//2,2)
+
+res = log(n,2)
+print(res)
