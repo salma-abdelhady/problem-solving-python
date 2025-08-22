@@ -1,0 +1,14 @@
+n = int(input())
+
+lst = list(map(int,input().split()))
+
+ispal = True
+for i in range(n//2):
+    if lst[i] != lst[n-i-1]:
+        ispal = False
+        break
+
+if ispal:
+    print("YES")
+else:
+    print("NO")
