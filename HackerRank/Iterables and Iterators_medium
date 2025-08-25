@@ -1,0 +1,15 @@
+from itertools import combinations
+
+n = int(input()) 
+lst = input().split() 
+k = int(input())
+
+comb = list(combinations(lst, k))
+
+count = 0 
+for c in comb: 
+    if 'a' in c: 
+        count += 1
+
+prob = count / len(comb) 
+print(f"{prob:.4f}")
