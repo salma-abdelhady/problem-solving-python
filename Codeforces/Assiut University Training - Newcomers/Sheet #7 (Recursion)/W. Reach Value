@@ -1,0 +1,16 @@
+t = int(input())
+
+def rec(n,val=1):
+    if n <= val:
+        return n == val
+    
+    return rec(n,val*10) or rec(n,val*20)
+
+while t:
+    n = int(input())
+    ans = rec(n)
+    if ans:
+        print("YES")
+    else:
+        print("NO")
+    t -= 1
