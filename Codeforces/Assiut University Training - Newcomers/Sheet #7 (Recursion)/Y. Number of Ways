@@ -1,0 +1,11 @@
+s, e = map(int,input().split())
+
+def rec(val):
+    if val > e:
+        return 0
+    if val == e:
+        return 1
+    return rec(val+1) + rec(val+2) + rec(val+3)
+
+total = rec(s)
+print(total)
