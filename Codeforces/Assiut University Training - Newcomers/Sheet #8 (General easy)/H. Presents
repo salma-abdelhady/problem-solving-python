@@ -1,0 +1,24 @@
+n = int(input())
+arr = list(map(int,input().split()))
+
+res = [0]*n
+
+for i in range(1,n+1):
+    for j in range(n):
+        if arr[j] == i:
+            p = j
+    res[i-1] = p+1
+
+print(*res)
+
+
+# optimized solution:
+n = int(input())
+arr = list(map(int,input().split()))
+
+res = [0]*n
+
+for i in range(n):
+    res[i] = arr.index(i+1)+1
+
+print(*res)  
