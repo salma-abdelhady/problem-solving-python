@@ -1,0 +1,10 @@
+prime = [0,0,0,0,1,1,1,0,1,0,0,0,1,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0]
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    if prime[n] == 1:
+        print("prime")
+    else:
+        print("not prime")
