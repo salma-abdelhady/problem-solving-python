@@ -1,0 +1,4 @@
+lst = list(map(int,input().split()))
+lst.sort()
+total_dis = (lst[1] - lst[0]) + (lst[2] - lst[1])
+print(total_dis)
