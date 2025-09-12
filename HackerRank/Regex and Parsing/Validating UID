@@ -1,0 +1,13 @@
+import re
+pattern = re.compile(r'^(?=.*[A-Z].*[A-Z])(?=.*\d.*\d.*\d)(?!.*(.).*\1)[A-Za-z0-9]{10}$')
+
+
+n = int(input())
+
+for _ in range(n):
+    id_ = input()
+    m = re.search(pattern,id_)
+    if m:
+        print("Valid")
+    else:
+        print("Invalid")
