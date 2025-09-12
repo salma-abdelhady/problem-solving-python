@@ -1,0 +1,11 @@
+import re
+
+pattern = re.compile(r'#[0-9A-Fa-f]{3}(?:[0-9A-Fa-f]{3})?')
+
+n = int(input())
+for _ in range(n):
+    row = input()
+    if ':' in row:  
+        matches = re.findall(pattern, row)
+        for m in matches:
+            print(m)
