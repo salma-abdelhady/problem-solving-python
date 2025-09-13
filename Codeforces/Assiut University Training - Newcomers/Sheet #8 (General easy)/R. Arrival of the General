@@ -1,0 +1,14 @@
+n = int(input())
+lst = list(map(int,input().split()))
+
+max_elm = max(lst)
+min_elm = min(lst)
+
+max_idx = lst.index(max_elm)
+min_idx = n - 1 - lst[::-1].index(min_elm)
+
+swaps = max_idx + (n - 1 - min_idx)
+if max_idx > min_idx:
+    swaps -= 1
+
+print(swaps)
