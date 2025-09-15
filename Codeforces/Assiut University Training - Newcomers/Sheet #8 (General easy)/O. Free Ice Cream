@@ -1,0 +1,17 @@
+n, x = map(int,input().split())
+distressed_kids = 0
+
+for _ in range(n):
+    op, i = input().split()
+    d= int(i)
+    
+    if op == '+':
+        x += d
+    
+    elif op == '-' and x >= d:
+        x -= d
+    
+    else:
+        distressed_kids += 1
+
+print(x,distressed_kids)
